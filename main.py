@@ -59,28 +59,6 @@ st.markdown(f"""
     </style>
 """, unsafe_allow_html=True)
 
-# Sidebar - About Section inside Box
-st.sidebar.markdown("""
-    <div style="background-color: #252526; padding: 15px; border-radius: 10px; color: white;">
-        <h3 style="text-align: center;">📌 About this App</h3>
-        <p>This AI-powered tutor helps you learn Data Science interactively:</p>
-        <ul>
-            <li>✅ Ask any Data Science questions</li>
-            <li>✅ Select your learning level</li>
-            <li>✅ Get clear, structured explanations</li>
-        </ul>
-        <p>Enjoy learning with AI! 🚀</p>
-    </div>
-""", unsafe_allow_html=True)
-
-# Sidebar - Settings Section inside Box
-st.sidebar.markdown("""
-    <div style="background-color: #252526; padding: 15px; border-radius: 10px; color: white;">
-        <h3 style="text-align: center;">⚙️ Settings</h3>
-""", unsafe_allow_html=True)
-
-user_level = st.sidebar.radio("", ["Beginner", "Intermediate", "Advanced"])
-st.sidebar.markdown("</div>", unsafe_allow_html=True)  # Closing the box div
 
 # System message
 system_message = SystemMessage(
@@ -158,7 +136,7 @@ st.markdown(
         }
     </style>
     <div class="footer">
-        Created by Yashwanth 🚀
+        Created by Neelima 🚀
     </div>
     """,
     unsafe_allow_html=True
