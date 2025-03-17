@@ -30,7 +30,7 @@ system_message = SystemMessage(
             
 )
 
-st.title("🔍 Ask AI: Your Data Science Helper")
+st.title("🚀 AI Data Science Tutor")
 
 # Display chat history
 chat_history = []
@@ -74,7 +74,7 @@ def generate_txt(chat_text):
 if chat_history:
     chat_text = "\n".join(chat_history)
     txt_file_path = generate_txt(chat_text)
-    st.sidebar.download_button("📥 Download Chat History", txt_file_path, file_name="chat_history.txt", mime="text/plain")
+    st.sidebar.download_button(" Download Chat History", txt_file_path, file_name="chat_history.txt", mime="text/plain")
 
 # Reset chat button
 if st.button("Reset Chat"):
