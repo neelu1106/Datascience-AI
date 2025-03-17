@@ -20,44 +20,7 @@ chat_model = ChatGoogleGenerativeAI(model='gemini-1.5-pro', temperature=0.7, goo
 if "memory" not in st.session_state:
     st.session_state.memory = ConversationBufferMemory(return_messages=True)
 
-# Sidebar UI - Theme Selection (On/Off Toggle)
-st.sidebar.markdown("""
-    <div style="background-color: #1E1E1E; padding: 10px; border-radius: 10px; color: white;">
-        <h3 style="text-align: center;">🎨 Theme Settings</h3>
-    </div>
-""", unsafe_allow_html=True)
 
-theme_mode = st.sidebar.toggle("Dark Mode")  # On/Off Toggle Button
-dark_mode = theme_mode  # True if Dark Mode is ON
-
-# Custom CSS styling based on theme mode
-st.markdown(f"""
-    <style>
-        .stApp {{
-            background: {'#1E1E1E' if dark_mode else '#F5F5F5'};
-            color: {'#FFFFFF' if dark_mode else '#000000'};
-            font-family: 'Poppins', sans-serif;
-        }}
-        [data-testid="stSidebar"] {{
-            background: {'#252526' if dark_mode else '#FFFFFF'};
-            color: {'#FFFFFF' if dark_mode else '#000000'};
-        }}
-        h1 {{
-            text-align: center;
-            color: {'#FFD700' if dark_mode else '#1F2937'};
-            font-weight: bold;
-        }}
-        .stButton > button {{
-            background: linear-gradient(to right, #ff758c, #ff7eb3);
-            color: white;
-            border-radius: 10px;
-            border: none;
-            padding: 8px 15px;
-            font-size: 14px;
-            font-weight: bold;
-        }}
-    </style>
-""", unsafe_allow_html=True)
 
 
 # System message
