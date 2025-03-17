@@ -64,7 +64,7 @@ st.markdown(f"""
 system_message = SystemMessage(
     content=f"You are an AI tutor specialized in answering only Data Science-related questions. "
             f"If the user asks anything outside Data Science, politely refuse to answer. "
-            f"Provide responses based on the user's learning level: {user_level}."
+            
 )
 
 st.title("🔍 Ask AI: Your Data Science Helper")
